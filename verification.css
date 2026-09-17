@@ -1,0 +1,657 @@
+/* =========================
+   VERIFICATION PAGE
+========================= */
+
+.verification-page {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 55px 7% 100px;
+
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+.progress-step {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #555661;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+.progress-step span {
+
+    width: 27px;
+
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #171820;
+
+    border: 1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.progress-step.completed {
+
+    color: #a78bfa;
+
+}
+
+
+.progress-step.completed span {
+
+    background:
+        rgba(124,92,255,0.15);
+
+    border-color:
+        rgba(167,139,250,0.3);
+
+}
+
+
+.progress-step.active {
+
+    color: white;
+
+}
+
+
+.progress-step.active span {
+
+    background: #7c5cff;
+
+    border-color: #7c5cff;
+
+}
+
+
+.progress-line {
+
+    width: 55px;
+
+    height: 1px;
+
+    margin: 0 10px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+}
+
+
+.completed-line {
+
+    background:
+        rgba(124,92,255,0.45);
+
+}
+
+
+.active-line {
+
+    background:
+        rgba(124,92,255,0.2);
+
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.verification-heading {
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 40px;
+
+}
+
+
+.verification-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(124,92,255,0.1);
+
+    border:
+        1px solid
+        rgba(167,139,250,0.2);
+
+    font-size: 30px;
+
+}
+
+
+.verification-heading h1 {
+
+    font-size: clamp(42px, 6vw, 62px);
+
+    letter-spacing: -2px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.verification-heading h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #a78bfa,
+            #6ee7f9
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+
+.verification-heading p {
+
+    color: #858590;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================
+   MATCH CARD
+========================= */
+
+.verified-match {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+
+    background: #101117;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+.item-symbol {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #191a23,
+            #0c0d11
+        );
+
+    font-size: 30px;
+
+}
+
+
+.matched-info {
+
+    flex: 1;
+
+}
+
+
+.matched-info small {
+
+    color: #686974;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    font-weight: 700;
+
+}
+
+
+.matched-info h2 {
+
+    font-size: 17px;
+
+    margin: 5px 0 9px;
+
+}
+
+
+.matched-details {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    color: #777783;
+
+    font-size: 10px;
+
+}
+
+
+.match-percentage {
+
+    text-align: right;
+
+}
+
+
+.match-percentage strong {
+
+    display: block;
+
+    color: #a78bfa;
+
+    font-size: 28px;
+
+}
+
+
+.match-percentage span {
+
+    color: #666672;
+
+    font-size: 9px;
+
+}
+
+
+/* =========================
+   VERIFICATION CARD
+========================= */
+
+.verification-card {
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background: #101117;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,0.3);
+
+}
+
+
+.question-number {
+
+    color: #a78bfa;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.verification-card h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.question-description {
+
+    color: #777783;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* =========================
+   ANSWER
+========================= */
+
+.answer-box {
+
+    margin-bottom: 20px;
+
+}
+
+
+.answer-box label {
+
+    display: block;
+
+    color: #e4e4e9;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 9px;
+
+}
+
+
+.answer-box input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 11px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.09);
+
+    background: #0b0c10;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+}
+
+
+.answer-box input:focus {
+
+    border-color: #8d75ff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(124,92,255,0.08);
+
+}
+
+
+.answer-box small {
+
+    display: block;
+
+    color: #555661;
+
+    font-size: 10px;
+
+    margin-top: 8px;
+
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.verification-result {
+
+    display: none;
+
+    padding: 15px;
+
+    margin-bottom: 18px;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+.verification-result.success {
+
+    display: block;
+
+    background:
+        rgba(65,200,120,0.08);
+
+    border:
+        1px solid
+        rgba(65,200,120,0.2);
+
+    color: #8de3af;
+
+}
+
+
+.verification-result.error {
+
+    display: block;
+
+    background:
+        rgba(255,80,80,0.07);
+
+    border:
+        1px solid
+        rgba(255,80,80,0.18);
+
+    color: #ff9a9a;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.verify-button {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c5cff,
+            #9b7cff
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.verify-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(124,92,255,0.25);
+
+}
+
+
+.security-note {
+
+    text-align: center;
+
+    color: #555661;
+
+    font-size: 10px;
+
+    margin-top: 18px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .verification-page {
+
+        padding: 40px 5% 80px;
+
+    }
+
+
+    .progress {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .progress-line {
+
+        width: 20px;
+
+        margin: 0 4px;
+
+    }
+
+
+    .progress-step {
+
+        font-size: 0;
+
+    }
+
+
+    .progress-step span {
+
+        font-size: 10px;
+
+    }
+
+
+    .verified-match {
+
+        align-items: flex-start;
+
+    }
+
+
+    .match-percentage {
+
+        display: none;
+
+    }
+
+
+    .verification-card {
+
+        padding: 25px;
+
+    }
+
+}

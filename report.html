@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Item | LostLink</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="report.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">L</span>
+
+            LostLink
+
+        </a>
+
+
+        <a href="index.html" class="back-link">
+
+            ← Home
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- Main -->
+
+    <main class="report-page">
+
+
+        <!-- Heading -->
+
+        <div class="report-heading">
+
+            <div class="small-label">
+                STEP 02 — REPORT
+            </div>
+
+            <h1>
+                Tell us about the <span>item.</span>
+            </h1>
+
+            <p>
+                Give us a few details so LostLink can find possible
+                matches around your campus.
+            </p>
+
+        </div>
+
+
+
+        <!-- Report Form -->
+
+        <section class="report-card">
+
+
+            <!-- Lost / Found selector -->
+
+            <div class="type-selector">
+
+                <button
+                    type="button"
+                    class="type-btn active"
+                    id="lostBtn"
+                    onclick="selectType('Lost')"
+                >
+
+                    🔍
+                    <span>
+                        I Lost Something
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="type-btn"
+                    id="foundBtn"
+                    onclick="selectType('Found')"
+                >
+
+                    🎒
+                    <span>
+                        I Found Something
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <form id="reportForm">
+
+
+                <!-- Category -->
+
+                <div class="form-group">
+
+                    <label for="category">
+                        What is the item?
+                    </label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option value="Phone">
+                            📱 Phone
+                        </option>
+
+                        <option value="Laptop">
+                            💻 Laptop
+                        </option>
+
+                        <option value="Wallet">
+                            👛 Wallet
+                        </option>
+
+                        <option value="Backpack">
+                            🎒 Backpack
+                        </option>
+
+                        <option value="Keys">
+                            🔑 Keys
+                        </option>
+
+                        <option value="ID Card">
+                            🪪 ID Card
+                        </option>
+
+                        <option value="Earphones">
+                            🎧 Earphones
+                        </option>
+
+                        <option value="Watch">
+                            ⌚ Watch
+                        </option>
+
+                        <option value="Books">
+                            📚 Books
+                        </option>
+
+                        <option value="Other">
+                            📦 Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Color -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="color">
+                            Color
+                        </label>
+
+                        <select id="color" required>
+
+                            <option value="">
+                                Select color
+                            </option>
+
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Blue</option>
+                            <option>Red</option>
+                            <option>Green</option>
+                            <option>Yellow</option>
+                            <option>Grey</option>
+                            <option>Brown</option>
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Location -->
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <select id="location" required>
+
+                            <option value="">
+                                Select location
+                            </option>
+
+                            <option>Library</option>
+                            <option>Cafeteria</option>
+                            <option>Classroom</option>
+                            <option>Lab</option>
+                            <option>Hostel</option>
+                            <option>Parking Area</option>
+                            <option>Sports Ground</option>
+                            <option>Auditorium</option>
+                            <option>Bus Stop</option>
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Date -->
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        rows="5"
+                        placeholder="Describe something that makes this item unique..."
+                        required
+                    ></textarea>
+
+                    <small>
+                        Example: Black Nike backpack with a small red
+                        keychain attached to the front pocket.
+                    </small>
+
+                </div>
+
+
+
+                <!-- Hidden ownership detail -->
+
+                <div class="form-group verification-box">
+
+                    <div class="verification-title">
+                        🔐 Private verification detail
+                    </div>
+
+                    <p>
+                        Add one detail that isn't obvious from the photo.
+                        We'll use this later to verify ownership.
+                    </p>
+
+                    <input
+                        type="text"
+                        id="verification"
+                        placeholder="Example: Sticker inside the bag"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+
+                    Submit Report →
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="report.js"></script>
+
+</body>
+
+</html>

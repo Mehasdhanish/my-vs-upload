@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Verify Ownership | LostLink</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="verification.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">L</span>
+
+            LostLink
+
+        </a>
+
+
+        <a
+            href="matches.html"
+            class="back-link"
+        >
+            ← Back to Matches
+        </a>
+
+    </nav>
+
+
+
+    <!-- Main -->
+
+    <main class="verification-page">
+
+
+        <!-- Progress -->
+
+        <div class="progress">
+
+            <div class="progress-step completed">
+                <span>✓</span>
+                Scan
+            </div>
+
+            <div class="progress-line completed-line"></div>
+
+            <div class="progress-step completed">
+                <span>✓</span>
+                Match
+            </div>
+
+            <div class="progress-line active-line"></div>
+
+            <div class="progress-step active">
+                <span>3</span>
+                Verify
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>4</span>
+                Recover
+            </div>
+
+        </div>
+
+
+
+        <!-- Heading -->
+
+        <section class="verification-heading">
+
+            <div class="verification-icon">
+                🛡️
+            </div>
+
+            <div class="small-label">
+                STEP 03 — VERIFY
+            </div>
+
+            <h1>
+                Prove it's <span>yours.</span>
+            </h1>
+
+            <p>
+                We found a possible match. Before revealing
+                contact details, confirm a private detail about
+                the item.
+            </p>
+
+        </section>
+
+
+
+        <!-- Match information -->
+
+        <section class="verified-match">
+
+            <div class="item-symbol" id="itemSymbol">
+                🎒
+            </div>
+
+
+            <div class="matched-info">
+
+                <small>
+                    POSSIBLE MATCH
+                </small>
+
+                <h2 id="itemName">
+                    Backpack
+                </h2>
+
+                <div class="matched-details">
+
+                    <span id="itemLocation">
+                        📍 Library
+                    </span>
+
+                    <span id="itemColor">
+                        🎨 Black
+                    </span>
+
+                    <span id="itemDate">
+                        📅 2026-09-15
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="match-percentage">
+
+                <strong id="matchScore">
+                    92%
+                </strong>
+
+                <span>
+                    possible match
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Verification Card -->
+
+        <section class="verification-card">
+
+
+            <div class="question-number">
+                PRIVATE QUESTION
+            </div>
+
+
+            <h2>
+                What is the hidden detail?
+            </h2>
+
+
+            <p class="question-description">
+
+                When you reported your lost item, you provided
+                a private detail that wasn't displayed publicly.
+
+                <br><br>
+
+                Enter that detail below.
+
+            </p>
+
+
+            <!-- Input -->
+
+            <div class="answer-box">
+
+                <label for="answer">
+                    Your answer
+                </label>
+
+                <input
+                    type="text"
+                    id="answer"
+                    placeholder="Enter the private detail..."
+                    autocomplete="off"
+                >
+
+                <small>
+                    🔒 This information is used only for verification.
+                </small>
+
+            </div>
+
+
+            <!-- Result -->
+
+            <div
+                id="verificationResult"
+                class="verification-result"
+            >
+            </div>
+
+
+            <!-- Button -->
+
+            <button
+                class="verify-button"
+                onclick="verifyOwnership()"
+            >
+
+                Verify Ownership →
+
+            </button>
+
+
+            <p class="security-note">
+
+                🛡️ Matching a photo does not automatically prove ownership.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="verification.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recover Item | LostLink</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="recovery.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🔗</span>
+            <span>LostLink</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="scan.html">Scan</a>
+            <a href="matches.html">Matches</a>
+        </nav>
+    </header>
+
+
+    <!-- Recovery Page -->
+    <main class="recovery-page">
+
+        <!-- Progress -->
+        <div class="progress-container">
+
+            <div class="progress-step completed">
+                <div class="step-circle">✓</div>
+                <span>Scan</span>
+            </div>
+
+            <div class="progress-line completed-line"></div>
+
+            <div class="progress-step completed">
+                <div class="step-circle">✓</div>
+                <span>Match</span>
+            </div>
+
+            <div class="progress-line completed-line"></div>
+
+            <div class="progress-step completed">
+                <div class="step-circle">✓</div>
+                <span>Verify</span>
+            </div>
+
+            <div class="progress-line active-line"></div>
+
+            <div class="progress-step active">
+                <div class="step-circle">4</div>
+                <span>Recover</span>
+            </div>
+
+        </div>
+
+
+        <!-- Success Header -->
+        <section class="success-header">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <p class="eyebrow">VERIFICATION COMPLETE</p>
+
+            <h1>
+                You're ready to recover<br>
+                your item.
+            </h1>
+
+            <p class="subtitle">
+                The ownership detail was successfully verified.
+                Choose a safe way to complete the recovery.
+            </p>
+
+        </section>
+
+
+        <!-- Recovery Card -->
+        <section class="recovery-card">
+
+            <div class="card-heading">
+                <div>
+                    <p class="section-label">MATCHED ITEM</p>
+                    <h2 id="itemName">Your Item</h2>
+                </div>
+
+                <div class="verified-badge">
+                    ✓ Verified
+                </div>
+            </div>
+
+
+            <!-- Item Information -->
+            <div class="item-details">
+
+                <div class="detail-box">
+                    <span class="detail-icon">📍</span>
+                    <div>
+                        <small>Reported Location</small>
+                        <strong id="itemLocation">—</strong>
+                    </div>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-icon">🎨</span>
+                    <div>
+                        <small>Color</small>
+                        <strong id="itemColor">—</strong>
+                    </div>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-icon">📅</span>
+                    <div>
+                        <small>Reported Date</small>
+                        <strong id="itemDate">—</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Recovery Options -->
+            <div class="recovery-options">
+
+                <p class="section-label">RECOVERY METHOD</p>
+
+                <div class="option selected" onclick="selectRecoveryMethod(this, 'Campus Help Desk')">
+
+                    <div class="option-icon">
+                        🏫
+                    </div>
+
+                    <div class="option-content">
+                        <h3>Campus Help Desk</h3>
+                        <p>
+                            Meet at the campus help desk to complete
+                            the handover safely.
+                        </p>
+                    </div>
+
+                    <div class="radio"></div>
+
+                </div>
+
+
+                <div class="option" onclick="selectRecoveryMethod(this, 'Safe Campus Meeting')">
+
+                    <div class="option-icon">
+                        🤝
+                    </div>
+
+                    <div class="option-content">
+                        <h3>Safe Campus Meeting</h3>
+                        <p>
+                            Arrange a handover at a public location
+                            on campus.
+                        </p>
+                    </div>
+
+                    <div class="radio"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Safety Notice -->
+            <div class="safety-notice">
+
+                <div class="safety-icon">
+                    🛡️
+                </div>
+
+                <div>
+                    <strong>Stay safe during the handover</strong>
+
+                    <p>
+                        Meet in a public campus location and avoid
+                        sharing sensitive personal information.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Recovery Button -->
+            <button
+                class="recover-button"
+                id="recoverButton"
+                onclick="completeRecovery()"
+            >
+                Mark Item as Recovered ✓
+            </button>
+
+            <p class="recovery-note">
+                Only mark the item as recovered after the handover
+                has actually taken place.
+            </p>
+
+        </section>
+
+
+        <!-- Completion Message -->
+        <section
+            class="completion-card"
+            id="completionCard"
+        >
+
+            <div class="completion-icon">
+                🎉
+            </div>
+
+            <h2>Item Recovered!</h2>
+
+            <p>
+                Great! This lost-and-found case has been
+                successfully completed.
+            </p>
+
+            <div class="completion-flow">
+                <span>SCAN</span>
+                <span>→</span>
+                <span>MATCH</span>
+                <span>→</span>
+                <span>VERIFY</span>
+                <span>→</span>
+                <strong>RECOVER</strong>
+            </div>
+
+            <button
+                class="home-button"
+                onclick="window.location.href='index.html'"
+            >
+                Back to LostLink
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p>LostLink © 2026 · Campus Lost & Found</p>
+    </footer>
+
+
+    <script src="recovery.js"></script>
+
+</body>
+</html>

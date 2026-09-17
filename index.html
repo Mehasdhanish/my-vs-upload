@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LostLink | Find What You Lost</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">L</span>
+            LostLink
+        </div>
+
+        <div class="nav-links">
+            <a href="#how-it-works">How it works</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </div>
+
+        <button class="login-btn" onclick="showLoginMessage()">
+            Login
+        </button>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                ✦ Smart Campus Lost & Found
+            </div>
+
+            <h1>
+                Lost something?
+                <span>Let LostLink find it.</span>
+            </h1>
+
+            <p>
+                Report lost items, scan found objects and discover
+                possible matches across your campus — all in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn" onclick="scanItem()">
+                    📷 Scan an Item
+                </button>
+
+                <button class="secondary-btn" onclick="browseItems()">
+                    Browse Lost Items →
+                </button>
+
+            </div>
+
+            <div class="trust-text">
+                🔒 Your item details stay private
+            </div>
+
+        </div>
+
+
+        <!-- Hero Visual -->
+        <div class="hero-visual">
+
+            <div class="glow"></div>
+
+            <div class="scan-card">
+
+                <div class="scan-header">
+                    <span>LostLink Scanner</span>
+                    <span class="live-dot">● Live</span>
+                </div>
+
+                <div class="camera-area">
+
+                    <div class="corner top-left"></div>
+                    <div class="corner top-right"></div>
+                    <div class="corner bottom-left"></div>
+                    <div class="corner bottom-right"></div>
+
+                    <div class="object-icon">
+                        🎒
+                    </div>
+
+                    <div class="scan-line"></div>
+
+                    <p>Position your item inside the frame</p>
+
+                </div>
+
+                <div class="scan-result">
+
+                    <div>
+                        <small>Possible match</small>
+                        <strong>Backpack</strong>
+                    </div>
+
+                    <div class="match-score">
+                        92%
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+    <section class="how-section" id="how-it-works">
+
+        <div class="section-heading">
+
+            <div class="small-label">
+                HOW IT WORKS
+            </div>
+
+            <h2>
+                From lost to found.
+            </h2>
+
+            <p>
+                Four simple steps to reconnect you with your belongings.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step-card active">
+
+                <div class="step-number">01</div>
+
+                <div class="step-icon">📷</div>
+
+                <h3>SCAN</h3>
+
+                <p>
+                    Scan or upload a photo of the item you lost or found.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-number">02</div>
+
+                <div class="step-icon">🔍</div>
+
+                <h3>MATCH</h3>
+
+                <p>
+                    LostLink compares items using important details and
+                    visual similarity.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-number">03</div>
+
+                <div class="step-icon">🛡️</div>
+
+                <h3>VERIFY</h3>
+
+                <p>
+                    Confirm ownership using private details only the
+                    real owner should know.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-number">04</div>
+
+                <div class="step-icon">🤝</div>
+
+                <h3>RECOVER</h3>
+
+                <p>
+                    Connect safely and get your belongings back.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features-section" id="features">
+
+        <div class="section-heading">
+
+            <div class="small-label">
+                WHY LOSTLINK
+            </div>
+
+            <h2>
+                More than a lost & found board.
+            </h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">📸</div>
+                <h3>Visual Matching</h3>
+                <p>
+                    Use an item's photo to discover visually similar
+                    reported items.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>Campus Based</h3>
+                <p>
+                    Find items around your college instead of searching
+                    through random online posts.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3>Private Verification</h3>
+                <p>
+                    Matching doesn't automatically prove ownership.
+                    Verification adds another layer of security.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta-section" id="about">
+
+        <div class="cta-content">
+
+            <div class="small-label">
+                YOUR CAMPUS. ONE PLACE.
+            </div>
+
+            <h2>
+                Lost it yesterday?
+                <br>
+                You might find it today.
+            </h2>
+
+            <button class="primary-btn" onclick="scanItem()">
+                Start with LostLink →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            <span class="logo-icon">L</span>
+            LostLink
+        </div>
+
+        <p>
+            Smart Lost & Found for modern campuses.
+        </p>
+
+        <span>
+            © 2026 LostLink
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

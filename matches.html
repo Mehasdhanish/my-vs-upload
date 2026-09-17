@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Possible Matches | LostLink</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="matches.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">L</span>
+
+            LostLink
+
+        </a>
+
+
+        <a
+            href="report.html"
+            class="back-link"
+        >
+            + New Report
+        </a>
+
+    </nav>
+
+
+
+    <!-- Main -->
+
+    <main class="matches-page">
+
+
+        <!-- Header -->
+
+        <section class="matches-heading">
+
+            <div class="small-label">
+                STEP 03 — MATCH
+            </div>
+
+            <h1>
+                Possible <span>matches.</span>
+            </h1>
+
+            <p>
+                LostLink compares your report with other reported
+                items and finds the closest matches.
+            </p>
+
+        </section>
+
+
+
+        <!-- Current Report -->
+
+        <section
+            class="current-report"
+            id="currentReport"
+        >
+
+            <div class="current-icon">
+                🔍
+            </div>
+
+            <div>
+
+                <small>
+                    YOUR REPORT
+                </small>
+
+                <h3 id="currentItem">
+                    Searching...
+                </h3>
+
+                <p id="currentDetails">
+                    Comparing reported items...
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Match Summary -->
+
+        <div class="match-summary">
+
+            <div>
+
+                <strong id="matchCount">
+                    0
+                </strong>
+
+                <span>
+                    possible matches
+                </span>
+
+            </div>
+
+
+            <select id="sortMatches">
+
+                <option value="score">
+                    Highest match
+                </option>
+
+                <option value="date">
+                    Most recent
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- Results -->
+
+        <section
+            class="results-grid"
+            id="resultsGrid"
+        >
+
+        </section>
+
+
+
+        <!-- Empty -->
+
+        <section
+            class="empty-state"
+            id="emptyState"
+            style="display:none;"
+        >
+
+            <div>
+                🔎
+            </div>
+
+            <h2>
+                No strong matches yet.
+            </h2>
+
+            <p>
+                Don't worry. Someone may report your item later.
+                Your report is saved.
+            </p>
+
+            <a href="report.html">
+                Create another report →
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Match Modal -->
+
+    <div
+        class="modal"
+        id="matchModal"
+    >
+
+        <div class="modal-card">
+
+            <button
+                class="close-modal"
+                onclick="closeModal()"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-icon">
+                🛡️
+            </div>
+
+
+            <div class="small-label">
+                POSSIBLE MATCH
+            </div>
+
+
+            <h2 id="modalTitle">
+                Item
+            </h2>
+
+
+            <div
+                class="modal-score"
+                id="modalScore"
+            >
+                0%
+            </div>
+
+
+            <div
+                class="match-reasons"
+                id="matchReasons"
+            >
+            </div>
+
+
+            <div class="verification-message">
+
+                🔐
+                <div>
+
+                    <strong>
+                        Ownership verification required
+                    </strong>
+
+                    <p>
+                        A match score alone doesn't prove ownership.
+                        The owner will need to confirm a private detail.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="verify-btn"
+                onclick="startVerification()"
+            >
+                Continue to Verification →
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="matches.js"></script>
+
+</body>
+
+</html>

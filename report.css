@@ -1,0 +1,292 @@
+/* =========================
+   REPORT PAGE
+========================= */
+
+.report-page {
+    max-width: 900px;
+    margin: auto;
+    padding: 70px 7% 100px;
+}
+
+
+/* Heading */
+
+.report-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.report-heading h1 {
+    font-size: clamp(40px, 6vw, 62px);
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+}
+
+.report-heading h1 span {
+    background: linear-gradient(90deg, #a78bfa, #6ee7f9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.report-heading p {
+    color: #858590;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+
+/* Card */
+
+.report-card {
+    background: #101117;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+}
+
+
+/* Lost / Found */
+
+.type-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.type-btn {
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: #15161d;
+
+    color: #858590;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.type-btn:hover {
+    border-color: rgba(167,139,250,0.4);
+}
+
+.type-btn.active {
+    color: white;
+
+    border-color: #8d75ff;
+
+    background: rgba(124,92,255,0.12);
+
+    box-shadow:
+        0 0 25px rgba(124,92,255,0.08);
+}
+
+
+/* Form */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #e6e6eb;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 9px;
+}
+
+.form-group small {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #5f606a;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* Inputs */
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border-radius: 11px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    background: #0b0c10;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8d75ff;
+
+    box-shadow:
+        0 0 0 3px rgba(124,92,255,0.08);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* Form row */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* Verification */
+
+.verification-box {
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: rgba(124,92,255,0.05);
+
+    border: 1px solid rgba(124,92,255,0.15);
+}
+
+.verification-title {
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.verification-box p {
+    color: #777783;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+
+/* Submit */
+
+.submit-btn {
+    width: 100%;
+
+    padding: 17px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c5cff,
+            #9b7cff
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 10px 30px rgba(124,92,255,0.2);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 40px rgba(124,92,255,0.3);
+}
+
+
+/* Back */
+
+.back-link {
+    color: #888894;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .report-page {
+        padding: 50px 5% 80px;
+    }
+
+    .report-card {
+        padding: 20px;
+    }
+
+    .type-selector {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+}

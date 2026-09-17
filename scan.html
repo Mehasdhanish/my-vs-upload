@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scan Item | LostLink</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scan.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">L</span>
+            LostLink
+        </a>
+
+        <a href="index.html" class="back-link">
+            ← Back
+        </a>
+
+    </nav>
+
+
+    <!-- Scan Page -->
+    <main class="scan-page">
+
+        <div class="scan-title">
+
+            <div class="small-label">
+                STEP 01 — SCAN
+            </div>
+
+            <h1>
+                What did you <span>lose?</span>
+            </h1>
+
+            <p>
+                Take a picture of the item or upload an existing photo.
+                LostLink will use it to look for possible matches.
+            </p>
+
+        </div>
+
+
+        <!-- Scanner -->
+        <section class="scanner-box">
+
+            <div class="camera-container">
+
+                <video id="camera" autoplay playsinline></video>
+
+                <div class="camera-placeholder" id="cameraPlaceholder">
+
+                    <div class="camera-icon">
+                        📷
+                    </div>
+
+                    <h3>Camera not started</h3>
+
+                    <p>
+                        Start your camera to scan an item.
+                    </p>
+
+                </div>
+
+
+                <!-- Scanner corners -->
+                <div class="scan-corner top-left"></div>
+                <div class="scan-corner top-right"></div>
+                <div class="scan-corner bottom-left"></div>
+                <div class="scan-corner bottom-right"></div>
+
+            </div>
+
+
+            <!-- Controls -->
+            <div class="scanner-controls">
+
+                <button
+                    class="primary-btn"
+                    id="cameraButton"
+                    onclick="startCamera()"
+                >
+                    📷 Start Camera
+                </button>
+
+                <button
+                    class="capture-btn"
+                    id="captureButton"
+                    onclick="capturePhoto()"
+                    disabled
+                >
+                    Capture
+                </button>
+
+                <label class="upload-btn">
+
+                    🖼️ Upload Image
+
+                    <input
+                        type="file"
+                        id="imageUpload"
+                        accept="image/*"
+                        hidden
+                    >
+
+                </label>
+
+            </div>
+
+
+            <!-- Status -->
+            <div class="scan-status" id="scanStatus">
+                Choose camera or upload an image to continue.
+            </div>
+
+        </section>
+
+
+        <!-- Captured Image -->
+        <section
+            class="preview-section"
+            id="previewSection"
+            style="display: none;"
+        >
+
+            <div class="preview-header">
+
+                <div>
+                    <div class="small-label">
+                        ITEM CAPTURED
+                    </div>
+
+                    <h2>Does this look right?</h2>
+                </div>
+
+                <button onclick="resetScan()" class="reset-btn">
+                    Retake
+                </button>
+
+            </div>
+
+
+            <div class="preview-card">
+
+                <img id="previewImage" alt="Captured item">
+
+            </div>
+
+
+            <button
+                class="continue-btn"
+                onclick="continueToReport()"
+            >
+                Continue →
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- Hidden Canvas -->
+    <canvas id="canvas"></canvas>
+
+
+    <script src="scan.js"></script>
+
+</body>
+</html>
